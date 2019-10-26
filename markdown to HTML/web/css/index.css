@@ -1,0 +1,77 @@
+.creator{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 2px black;
+    font-size: 18;
+}
+.main{
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+.inputSection{
+    margin-bottom: 50px;
+    width: 100%;
+}
+.head-1{
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(204, 201, 34);
+    color: white;
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+textarea{
+    width: 90%;
+    float: left;
+    border: 2px solid rgb(204, 201, 34);
+    margin-left: 4%;
+    min-height: 300px;
+    resize: none;
+    padding-top: 10px;
+    padding-left: 1%;
+    color: rgb(75, 75, 75);
+}
+input[type="text"]{
+    width: 200px;
+    float: left;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    margin-left: 4%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid rgb(204, 201, 34);
+}
+.output{
+    float: left;
+}
+button.submit-markdown{
+    background-color: rgb(204, 201, 34);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    color: white;
+    border: 1px solid rgb(204, 201, 34);
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    transition: all .2s ease-in-out;
+}
+button.submit-markdown:hover{
+    background-color: white;
+    color: rgb(75, 75, 75);
+    border: 1px solid rgb(75, 75, 75);
+}
+html,body{margin:0;}

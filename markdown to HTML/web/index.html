@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>markdown to html</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="/eel.js"></script>
+    <script>
+        function get(id){
+            return document.getElementById(id);
+        }
+        async function translate(){
+            var markdownData = get("text").value;
+            var filename = get("fn").value;
+            var data = await eel.handleMarkdown(markdownData,filename)(function(data){
+                get("op").innerHTML = data
+            });
+        }
+        function call(){
+            translate();
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="creator">by : ashkan mohammadi</div>
+    <div class="main">
+        <div class="inputSection">
+            <div class="head-1">enter mark down</div>
+            <div class="textareaContainer">
+                <textarea name="markdown" id="text"></textarea>
+                <input type="text" name="filename" id="fn"
+                placeholder="enter a file name if you want to write to a file ">
+                <button class="submit-markdown" onclick="call();">translate !</button>
+            </div>
+        </div>
+        <div class="outputSection">
+            <div class="head-1">out put will be here</div>
+            <div class="output" id="op">
+                nothing yet !
+            </div>
+        </div>
+    </div>
+</body>
+</html>
