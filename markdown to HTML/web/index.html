@@ -21,7 +21,27 @@
         function call(){
             translate();
         }
-        
+        function openOutputDirectory(){
+            eel.openOutputDirectory();
+        }
+        var turn = 0;
+        function changeDirection(obj){
+            var tarea = get("text")
+            var oarea = get("op")
+            if (turn == 0){
+                obj.innerText = "left to right"
+                tarea.style.direction="rtl";
+                oarea.style.direction="rtl";
+                turn++;
+                console.log(turn)
+            }else if (turn == 1){
+                obj.innerText = "right to left";
+                tarea.style.direction="ltr";
+                oarea.style.direction="ltr";
+                turn = 0;
+                console.log(turn)
+            } 
+        }
     </script>
 </head>
 <body>
@@ -34,6 +54,12 @@
                 <input type="text" name="filename" id="fn"
                 placeholder="enter a file name if you want to write to a file ">
                 <button class="submit-markdown" onclick="call();">translate !</button>
+                <button class="submit-markdown" onclick="openOutputDirectory()">
+                    open output directory
+                </button>
+                <button class="submit-markdown" onclick="changeDirection(this);">
+                    right to left
+                </button>
             </div>
         </div>
         <div class="outputSection">
